@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install frontend dependencies
         run: cd analytics-app && npm ci --omit=optional
   backend:
@@ -26,6 +26,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install backend dependencies
         run: cd backend && npm ci --omit=optional
