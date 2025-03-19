@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '18'
       - name: Install frontend dependencies
-        run: cd analytics-app && npm install
+        run: cd analytics-app && npm ci --omit=optional
   backend:
     runs-on: ubuntu-latest
     steps:
@@ -28,5 +28,4 @@ jobs:
         with:
           node-version: '18'
       - name: Install backend dependencies
-        run: cd backend && npm install
-
+        run: cd backend && npm ci --omit=optional
